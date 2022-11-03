@@ -1,0 +1,138 @@
+@font-face {
+  font-family:Norse ;
+  src: url(./fonts/Norse.otf);
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Norse;
+}
+
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+justify-content: center;
+background-image: url(./image/table.jpg);
+perspective: 1000px;
+}
+
+
+.book{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.book:hover .cover{
+  transform: rotatex(10deg) rotatey(-180deg);
+}
+.book:hover .page{
+  transform: rotatex(10deg) rotatey(-180deg);
+  z-index: 2;
+}
+.cover{
+  z-index: 1;
+  transition: all 3s;
+}
+.back-cover{
+  z-index: -2;
+}
+
+.cover,
+.back-cover{
+  height: 600px;
+  width: 520px;
+  background: #533700;
+  border-radius: 2px 20px 20px 2px;
+  position: absolute;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+transform: rotatex(10deg);
+transform-origin: center left;
+}
+.page,
+.last-page{
+  height: 560px;
+  width: 500px;
+  background: wheat;
+  position: absolute;
+  border-radius: 2px 10px 10px 2px;
+  transform: rotatex(10deg);
+  z-index: -1;
+  transform-origin: center left;
+}
+.page:nth-child(2){
+  transition-duration: 3s;
+}
+.page:nth-child(3){
+  transition-duration: 2.6s;
+}
+.page:nth-child(4){
+  transition-duration: 2.2s;
+}
+.page:nth-child(5){
+  transition-duration: 1.8s;
+}
+.page:nth-child(6){
+  transition-duration: 1.4s;
+}
+.book:hover .page:nth-child(2){
+  transition-duration: 6s;
+}
+.book:hover .page:nth-child(3){
+  transition-duration: 5.6s;
+}
+.book:hover .page:nth-child(4){
+  transition-duration: 5.2s;
+}
+.book:hover .page:nth-child(5){
+  transition-duration: 4.8s;
+}
+.book:hover .page:nth-child(6){
+  transition-duration: 4.4s;
+}
+
+.last-page img{
+  width: 300px;
+  display: block;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  z-index: -30;
+  margin-bottom: 100px;
+}
+.valoracion img{
+  width: 200px;
+  border-radius: 20%;
+  margin: 20px auto;
+  z-index: -5;
+  margin-top: 100px;
+  margin-left: 150px;
+}
+.last-page h3{
+  text-align: center ;
+  position: relative;top:-100px;
+  font-size: 70px;
+}
+.cover h2{
+  text-align: center ;
+  position: relative;top:70px;
+  font-size: 70px;
+}
+.cover img{
+  width: 450px;
+  height: 250px;
+  display: block;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  z-index: -1;
+  margin-bottom: 100px;
+}
+.ingredientes{
+  text-align: left ;
+  position: relative;top: 150px;
+  font-size: 30px;
+  margin-left:-250px;
+}
+
